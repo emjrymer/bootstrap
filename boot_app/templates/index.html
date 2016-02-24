@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boot project </title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+<div>
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="{% url 'home' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'detailedinfo' %}">Detailed Info</a></li>
+  <li role="presentation"><a href="{%  url 'aboutMe' %}">About Me</a></li>
+</ul>
+</div>
+<img src= "{% static 'hello_puppy.jpg' %}" width = 400 height = 250/>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boot project </title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+<div>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
+  <li role="presentation" class="active"><a href="{% url 'detailedinfo' %}">Detailed Info</a></li>
+  <li role="presentation"><a href="{%  url 'aboutMe' %}">About Me</a></li>
+</ul>
+</div>
+<h1>Detailed Info</h1>
+<div>
+<h1>List of available Dogs for adoption</h1>
+{% for puppy in puppies %}
+    <div>{{ puppy }}</div>
+{% endfor %}
+</div>
+</body>
+</html>

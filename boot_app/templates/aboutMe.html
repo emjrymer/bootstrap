@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boot project </title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+<div>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'detailedinfo' %}">Detailed Info</a></li>
+  <li role="presentation" class="active"><a href="{%  url 'aboutMe' %}">About Me</a></li>
+</ul>
+</div>
+<h1>About Me</h1>
+<address>
+  <strong>Puppy, Inc.</strong><br>
+  1355 Market Street, Suite 900<br>
+  San Francisco, CA 94103<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+
+<address>
+  <strong>Puppy For All</strong><br>
+  <a href="mailto:#">puppy_for_all@puppy.com</a>
+</address>
+</body>
+</html>
