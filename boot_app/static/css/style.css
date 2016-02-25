@@ -1,0 +1,49 @@
+#mod{
+    margin-left: 30px;
+
+}
+
+.embed-responsive-item{
+    position: relative;
+    padding-bottom: 56.45%;
+    height: 0;
+}
+
+.list-group{
+    width: 40%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.list-group-item{
+    margin-left: 10px;
+    text-align: center;
+
+}
+
+.container{
+    background-color: #bce8f1;
+    height: 1200px;
+}
+
+.nav{
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100%;
+}
+
+img{
+    float: inherit;
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+#available_dogs{
+    float: inherit;
+    margin-top: 45px;
+
+}
+
+ul li {
+    list-style-type: none;
+}

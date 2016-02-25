@@ -17,3 +17,7 @@ def about_view(request):
 def info_view(request):
     all_puppy = Puppy.objects.all()
     return render_to_response('detailedinfo.html', {'puppies': all_puppy})
+
+
+def application_view(request):
+    return render_to_response('application_form.html', {})

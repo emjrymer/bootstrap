@@ -5,9 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>boot project </title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 </head>
 <body>
+<div class="container-fluid">
 <div>
 <ul class="nav nav-pills">
   <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
@@ -15,12 +17,23 @@
   <li role="presentation"><a href="{%  url 'aboutMe' %}">About Me</a></li>
 </ul>
 </div>
-<h1>Detailed Info</h1>
-<div>
-<h1>List of available Dogs for adoption</h1>
+<h1 id="available_dogs">Available Dogs for Adoption</h1>
+<br>
+    <div class="list-group">
 {% for puppy in puppies %}
-    <div>{{ puppy }}</div>
+
+     <ul>{{ puppy }}
+
+        <li class="success">Age:  {{ puppy.age }}</li>
+
+
+    <li class="warning">Size:  {{ puppy.size }}</li>
+<br>
+    </ul>
 {% endfor %}
+</div>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
 </div>
 </body>
 </html>

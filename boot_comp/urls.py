@@ -16,11 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from boot_app.views import index_view, info_view, about_view
+from boot_app.views import index_view, info_view, about_view, application_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index_view, name="home"),
     url(r'^detailedinfo/', info_view, name="detailedinfo"),
-    url(r'^aboutMe/', about_view, name="aboutMe")
+    url(r'^aboutMe/', about_view, name="aboutMe"),
+    url(r'^application_form/', application_view, name="applicationform")
 ]
